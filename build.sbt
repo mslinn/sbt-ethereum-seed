@@ -11,6 +11,7 @@ if (Option(System.getenv("INFURA_TOKEN")).isDefined) {
   // 2) Define an environment variable called INFURA_TOKEN to hold the token.
   //    You might want to set the environment variable in `~/.bashrc`, `~/.profile` or `~/.bash_profile`, like this:
   //    export INFURA_TOKEN="blahblahblah"
+  // The next time you run this project from SBT the token will be used to connect with an Infura Ethereum node.
 
   // The eth-command-line client uses the token to access an Infura Ethereum node by the following incantation:
   ethJsonRpcUrl := s"http://mainnet.infura.io/${ sys.env("INFURA_TOKEN") }"
